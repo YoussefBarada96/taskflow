@@ -2,7 +2,7 @@
 
 A collaborative Kanban-style project tracker. Teams organize work into workspaces and boards, drag task cards between lists, assign people, set due dates, and discuss work in comments.
 
-**Live demo:** _add your deployed URL here_ &nbsp;·&nbsp; **Demo login:** `demo@example.com` / `demo-password-123` (a shared, resettable account)
+**Live demo:** [taskflow-seven-rose.vercel.app](https://taskflow-seven-rose.vercel.app/) &nbsp;·&nbsp; **Demo login:** `demo@example.com` / `demo-password-123` (a shared, resettable account)
 
 ![Kanban board with four lists and task cards](docs/screenshots/board.png)
 
@@ -87,7 +87,7 @@ npm run dev                  # http://localhost:3000
    so committed migrations are applied on every deploy.
 4. **Add environment variables** in Vercel: `DATABASE_URL` (pooled), `DIRECT_URL` (direct) and `AUTH_SECRET` (generate a fresh value; don't reuse your local one). `AUTH_TRUST_HOST` isn't needed on Vercel. If you see prepared-statement errors with the pooled connection, append `&pgbouncer=true` to `DATABASE_URL`.
 5. **Deploy**, then optionally seed demo data by running `npm run db:seed` locally with `DATABASE_URL` and `DIRECT_URL` pointing at the production database. Set `DEMO_PASSWORD` first if you don't want the default password public.
-6. **Update the live demo link** at the top of this README.
+6. **Check Deployment Protection** (Settings, Deployment Protection) so the production URL opens without a Vercel login, then link it at the top of this README.
 
 ## Project structure
 
